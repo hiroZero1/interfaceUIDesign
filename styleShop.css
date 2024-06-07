@@ -1,0 +1,105 @@
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* アイコンメニュー */
+.iconMenu {
+  position: fixed;
+  top: 2%;
+  left: 2%;
+  z-index: 1000;
+}
+
+.iconMenu img {
+  width: 10vw;
+  cursor: pointer;
+}
+
+/* コンテンツセクション */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 5% 10% 5%; /* 上部に5%、左右に5%、下部に10%の余白を追加 */
+  min-height: 100vh; /* セクションをWeb1枚分の高さに設定 */
+  background-color: #fff;
+  background-image: url('images/Background8.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 5vh; /* セクション間に余白を追加 */
+}
+
+/* テキストと画像 */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5%;
+  width: 100%;
+}
+
+.content .text {
+  width: 50%;
+  background: rgba(255, 255, 255, 0.8); /* 半透明の背景 */
+  padding: 2%; /* 内側の余白 */
+  border-radius: 10px; /* 角を丸める */
+}
+
+.content .text .text-heading {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.content .text p {
+  font-size: 1.2em; /* フォントサイズを大きく */
+}
+
+.content .image {
+  width: 45%;
+}
+
+.content .image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+/* 左側のGoogleマップ用スペース */
+.map-section {
+  width: 50%;
+  height: 60vh; /* 高さも相対値で指定 */
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* 右側の画像4枚セクション */
+.image-grid {
+  width: 45%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2%;
+}
+
+.image-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 5%;
+}
+
+
+
+/* フッター */
+footer {
+  text-align: center;
+  padding: 2%;
+  background-color: #333;
+  color: #fff;
+}

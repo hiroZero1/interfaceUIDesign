@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+<body>
+  <div class="icon" id="top">
+    <img src="images/icon1.png" alt="Icon">
+  </div>
+  <!-- アイコンメニューの追加 -->
+  <div class="iconMenu">
+    <img src="images/icon2.png" alt="Icon" id="menuIcon">
+  </div>
+  <!-- オーバーレイメニューの追加 -->
+  <div id="overlayMenu" class="overlay">
+    <div class="overlay-content">
+      <a href="javascript:void(0)" class="closebtn" id="closeBtn">&times;</a>
+      <a href="#top">TOP</a>
+      <a href="#kinds">KINDS</a>
+      <a href="#spot">SPOT&CAFE</a>
+      <a href="#news">NEWS</a>
+    </div>
+  </div>
+
+  <div class="background-slideshow">
+    <div class="slide" style="background-image: url('images/image1.png');"></div>
+    <div class="slide" style="background-image: url('images/image2.png');"></div>
+    <div class="slide" style="background-image: url('images/image3.png');"></div>
+    <div class="slide" style="background-image: url('images/image5.png');"></div>
+  </div>
+  <div class="scroll-content">
+    <div class="page-container right-align">
+      <img class="background-img left-half" src="images/Background2.png" alt="Background 1">
+      <img class="content-img" src="images/English/sentense1.png" alt="Sentense 1">
+    </div>
+    <div class="page-container left-align">
+      <img class="background-img right-half" src="images/Background3.png" alt="Background 2">
+      <img class="content-img" src="images/English/sentense2.png" alt="Sentense 2">
+    </div>
+    <div class="page-container right-align">
+      <img class="background-img left-half" src="images/Background2.png" alt="Background 3">
+      <img class="content-img" src="images/English/sentense3.png" alt="Sentense 3">
+    </div>
+    <div class="page-container left-align">
+      <img class="content-img" src="images/English/sentense4.png" alt="Sentense 4">
+    </div>
+  </div>
+  <div class="content-section">
+    <div class="content">
+      <div class="text">
+        <img src="images/icon1.png" alt="Icon" class="text-icon">
+        <p>McDonald's can't stay in Mejiro.<br>
+          Cafes can stay in Mejiro.<br>
+          A chain restaurant cannot remain in Mejiro.<br>
+          It can only remain with cafes in Mejiro.<br>
+          Only cafes can remain in Mejiro.</p>
+      </div>
+      <div class="image">
+        <img src="images/MejiroStation.jpg" alt="Your Content Image">
+      </div>
+    </div>
+  </div>
+  <div class="content-map-section">
+    <div class="contentMap">
+      <div class="imageMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3239.204343887906!2d139.70401917559374!3d35.72119267257437!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z55uu55m96aeF!5e0!3m2!1sja!2sjp!4v1717651827457!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="textMap">
+        <p><strong>Mejiro Station</strong> is a JR Yamanote Line station located in Toshima-ku, Tokyo, situated in a quiet residential area.<br>
+           Nearby, you'll find Mejiro Gakuen and Gakushuin University, making it a hub for many students.<br>
+           The beautiful Mejiro Garden is also close by.<br>
+           The area is dotted with small shopping streets and cafes, perfect for shopping and relaxation.<br>
+           The station offers convenient transportation, providing easy access to major locations in Tokyo.</p>
+        <img src="images/yamanote.png" alt="yamanoteIcon" class="yamanoteIcon">
+      </div>
+    </div>
+  </div>
+  <div class="slider-section">
+    <div class="swiper-container jsIndexGallerySlider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="images/slide2/slide1.jpg" alt="Slide 1"></div>
+        <div class="swiper-slide"><img src="images/slide2/slide2.jpg" alt="Slide 2"></div>
+        <div class="swiper-slide"><img src="images/slide2/slide3.jpg" alt="Slide 3"></div>
+        <div class="swiper-slide"><img src="images/slide2/slide4.jpg" alt="Slide 4"></div>
+        <div class="swiper-slide"><img src="images/slide2/slide5.jpg" alt="Slide 5"></div>
+        <div class="swiper-slide"><img src="images/slide2/slide6.jpg" alt="Slide 6"></div>
+      </div>
+    </div>
+  </div>
+  <div class="feature-head" id = "kinds">
+    <div class="textFeature">
+      <p class="main-text">KINDS</p>
+      <p class="sub-text">Types of stores introduced</p>
+    </div>
+  </div>
+  <div class="feature-section">
+    <div class="feature-item">
+      <img src="images/Cafe.jpg" alt="Cafe Image">
+    </div>
+    <div class="feature-item">
+      <img src="images/Garden.png" alt="Garden Image">
+    </div>
+  </div>
+  <div class="more-section">
+    <a href="more1.html" class="more-button">More <span class="arrow">→</span></a>
+  </div>
+  <div class="background-section" id ="spot">
+    <div class="textStore">
+      <p class="main-text">SPOT&CAFE</p>
+      <p class="sub-text">Types of spot introduced</p>
+    </div>
+    <div class="grid gap-[calc(var(--spacer)*35)] grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 mt-[calc(var(--spacer)*110)]">
+      <div class="group/item row-span-2 col-span-2">
+        <a href="shop1.html">
+          <div class="relative">
+            <img src="images/shop/shop1.png" alt="" loading="lazy" style="border-radius: 30% 0 30% 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop2.html">
+          <div class="relative">
+            <img src="images/shop/shop2.png" alt="" loading="lazy" style="border-radius: 30% 0 0 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop3.html">
+          <div class="relative">
+            <img src="images/shop/shop3.png" alt="" loading="lazy" style="border-radius: 0 30% 0 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop4.html">
+          <div class="relative">
+            <img src="images/shop/shop4.png" alt="" loading="lazy" style="border-radius: 0 30% 0 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop5.html">
+          <div class="relative">
+            <img src="images/shop/shop5.png" alt="" loading="lazy" style="border-radius: 0 0 30% 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop6.html">
+          <div class="relative">
+            <img src="images/shop/shop6.png" alt="" loading="lazy" style="border-radius: 0 0 0 30%;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop7.html">
+          <div class="relative">
+            <img src="images/shop/shop7.png" alt="" loading="lazy" style="border-radius: 0 0 0 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+      <div class="group/item">
+        <a href="shop8.html">
+          <div class="relative">
+            <img src="images/shop/shop8.png" alt="" loading="lazy" style="border-radius: 0 0 30% 0;">
+            <div class="pb-[100%]"></div>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="more-section2">
+      <a href="more2.html" class="more-button2">
+        More
+        <span class="arrow">→</span>
+      </a>
+    </div>
+    <div class="additional-images" id = "news">
+      <div class="content2">
+        <div class="text2">
+          <img src="images/icon3.png" alt="Icon" class="text-icon2">
+          <p>Recently, a stylish café has opened again in Mejiro. It's called COD.<br>
+            The menu mainly features sausages and coffee. Their hot dogs are exquisite, so be sure to try one.<br>
+            In the future, they plan to operate as a bar with late-night hours.</p>
+        </div>
+        <div class="imageCafe">
+          <img src="images/cafe/cafe3.jpg" alt="Your Content Image">
+        </div>
+        <div class="footer-spacer"></div>
+    </div>
+    
+
+  </div>
+  <footer>
+    <p>© For MEJIRO</p>
+  </footer>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="background-slideshow.js"></script>
+  <script src="image-slider.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

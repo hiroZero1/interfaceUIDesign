@@ -1,0 +1,567 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.icon {
+  position: fixed;
+  top: 1%;
+  left: 2%;
+  z-index: 2;
+  width: 10%;
+  height: auto;
+}
+
+.icon img {
+  width: 100%;
+  height: auto;
+}
+
+.iconMenu {
+  position: fixed;
+  top: 4%;
+  right: 3%;
+  z-index: 2;
+  width: 3%;
+  height: auto;
+}
+
+.iconMenu img {
+  width: 100%;
+  height: auto;
+}
+
+/* オーバーレイのスタイル */
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.overlay-content a {
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 3rem;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.overlay-content a:hover,
+.overlay-content a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 1.25rem;
+  right: 3.25rem;
+  font-size: 3.75rem;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay-content a {
+      font-size: 1.25rem;
+  }
+  .overlay .closebtn {
+      font-size: 2.5rem;
+      top: 1rem;
+      right: 2.25rem;
+  }
+}
+
+.background-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  opacity: 1;
+}
+
+.scroll-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 500vh; /* Adjust this to fit all pages */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-top: 20vh; /* Adjust this value to move the first image down */
+}
+
+.page-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding-top: 20vh; /* Adjust the value to move the images down */
+}
+
+.right-align {
+  justify-content: flex-end;
+  padding-right: 5%;
+}
+
+.left-align {
+  justify-content: flex-start;
+  padding-left: 5%;
+}
+
+.background-img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%; /* Adjust the image height */
+  width: 40%; /* Adjust the image width */
+  opacity: 0.5;
+}
+
+.right-half {
+  right: 0;
+  left: auto;
+}
+
+.left-half {
+  left: 0;
+  right: auto;
+}
+
+.content-img {
+  position: relative;
+  max-width: 90%;
+  max-height: 80%;
+  object-fit: contain;
+  z-index: 2; /* Ensure content image is above background */
+}
+
+.page-container.right-align .content-img {
+  margin-left: auto;
+  margin-right: 5%;
+}
+
+.page-container.left-align .content-img {
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.content-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.text {
+  flex: 1;
+  padding-right: 1%;
+}
+
+.text-icon {
+  display: block;
+  margin: 0 auto 1.25rem;
+  width: 50%; /* Adjust the size of the icon */
+  height: auto;
+  margin-left: -3%; /* Move the icon 20% to the left */
+  margin-bottom:-5%;
+}
+
+.text p {
+  font-size:180%;
+  text-align: left;
+  max-width: 100%;
+  line-height: 1.8; /* Increase the line height */
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image img {
+  width: 130%; /* Adjust the image width to make it twice the size */
+  height: auto;
+  border-radius: 20% 0 0 20%;   /* 角丸の指定 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right:-20%;
+}
+
+.content-map-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 1%;
+}
+
+.contentMap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+}
+
+.imageMap {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+  border-radius: 0 20% 20% 0;
+}
+
+.imageMap iframe {
+  width: 150%; /* Set to 100% of the parent container */
+  height: 60vh; /* Adjust the height as needed */
+  border: 0;
+}
+
+.textMap{
+  flex: 1;
+  padding-left: 15%;
+}
+
+.textMap p{
+  font-size: 150%;
+  text-align: left;
+  max-width: 150%;
+  line-height: 1.8; /* Increase the line height */
+  color: #403535; /* Change the text color */
+  margin-bottom:-5%;
+}
+
+.yamanoteIcon {
+  display: block;
+  margin: 4% auto 0;
+  width: 90%; /* Increase the size of the icon */
+  height: auto;
+}
+
+.slider-section {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding:1%;
+}
+
+.swiper-container {
+  width: 100%;
+  height:60vh; /* Adjust height to accommodate the offset */
+  overflow: hidden;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%; /* Adjust this value to set the space between slides */
+}
+
+.swiper-slide:nth-child(odd) {
+  padding-top: 10%; /* Adjust this value to set the vertical offset for odd slides */
+}
+
+.swiper-slide img {
+  width: auto;
+  height: calc(100% - 30%); /* Adjust height to prevent clipping based on the padding-top value */
+  object-fit: cover;
+  border-radius: 0 30% 0 30%; 
+}
+
+.feature-head {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding:1%;
+}
+
+.textFeature{
+  text-align: center; /* Center align all text inside this div */
+}
+
+.textFeature .main-text  {
+  font-size:600%;
+  max-width: 200%;
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+}
+
+.textFeature .sub-text {
+  font-size:200%;
+  max-width: 150%;
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+  margin-top:-10%;
+}
+
+.feature-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-image: url('images/Background5.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 10% 0;
+  display: flex;
+  justify-content: center; /* Center align the images */
+  gap: 10%; /* Adjust the gap between the images */
+  align-items: center;
+}
+
+.feature-item {
+  position: relative;
+  width: 20%; /* Adjusted to 2/3 of the previous size */
+  text-align: center;
+  overflow: hidden;
+}
+
+.feature-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.more-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:20vh;
+  padding: 3em 0; /* 上下のパディングを3emに設定 */
+  background-color: white; /* 必要に応じて背景色を調整 */
+  margin-top: -5%; /* セクション全体を5%上に移動 */
+}
+
+.more-button {
+  background: none;
+  border: 0.125em solid #008cba; /* ボーダーの幅を0.125emに設定 */
+  color: #008cba; /* テキストカラーを調整 */
+  padding: 0.9375em 3.125em; /* パディングを上下0.9375em、左右3.125emに設定 */
+  font-size: 1em; /* フォントサイズを1emに設定 */
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* リンクの下線を削除 */
+}
+
+.more-button .arrow {
+  margin-left: 0.625em; /* 左のマージンを0.625emに設定 */
+}
+
+.background-section {
+  background-image: url("images/Background7.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 350vh;
+  width: 100%;
+  position: relative;
+  margin-top:-5%;
+}
+
+.textStore {
+  text-align: center; /* Center align all text inside this div */
+  padding-top: 10vh; /* 上部に余白を追加 */
+}
+
+.textStore .main-text {
+  font-size: 4vw; /* 相対的なフォントサイズ */
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+}
+
+.textStore .sub-text {
+  font-size: 1.5vw; /* 相対的なフォントサイズ */
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+  margin-top: 1.2vh; /* 上部に余白を追加 */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 2rem; /* Adjust the gap size as needed */
+  width: 50vw; /* Width set to half of the viewport width */
+  margin: 0 auto; /* Center the grid */
+  margin-top: calc(var(--spacer) * 110);
+}
+
+.sm\:grid-cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lg\:grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.group\/item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.group\/item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1em;
+}
+
+.group\/item.row-span-2 {
+  grid-row: span 2 / span 2;
+}
+
+.group\/item.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.more-section2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.0% 0;
+  margin-top: -10%; /* セクション全体を5%上に移動 */
+}
+
+.more-button2 {
+  background: none;
+  border: 0.2vw solid #008cba;
+  color: #008cba;
+  padding: 1.5vw 2.5vw;
+  font-size: 1vw;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.more-button2 .arrow2 {
+  margin-left: 1vw;
+}
+
+.additional-images {
+  display: flex;
+  justify-content: center;
+  align-items: right;
+  margin-top: 20rem;
+  gap: 1rem;
+}
+
+.content2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.text2 {
+  flex: 1;
+  padding-right: 1%;
+}
+
+.text-icon2 {
+  display: block;
+  margin: 0 auto 1.25rem;
+  width: 50%; /* Adjust the size of the icon */
+  height: auto;
+  margin-left: -3%; /* Move the icon 20% to the left */
+  margin-bottom:-5%;
+}
+
+.text2 p {
+  font-size:180%;
+  text-align: left;
+  max-width: 100%;
+  line-height: 1.8; /* Increase the line height */
+  color: #403535; /* Change the text color */
+  font-weight: bold;
+}
+
+.imageCafe {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.imageCafe img {
+  width: 130%; /* Adjust the image width to make it twice the size */
+  height: auto;
+  border-radius: 20% 0 0 20%;   /* 角丸の指定 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right:-20%;
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top:13.7%;
+  z-index: 3;
+}
